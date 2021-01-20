@@ -23,7 +23,7 @@ function Sender() {
     useEffect(() => {
         axios({
             method: "GET",
-            url: "http://localhost:3000/users/recive"
+            url: "/users/recive"
         }).then(res => {
             setMessage({ msg: res.data })
             console.log(res.data);
@@ -54,7 +54,7 @@ function Sender() {
                         e.preventDefault();
                         await axios({
                             method: "POST",
-                            url: "http://localhost:3000/users/send",
+                            url: "/users/send",
                             data: state.data
                         }).then(response => {
                             setState({ message: "" })
@@ -64,7 +64,7 @@ function Sender() {
 
                         await axios({
                             method: "GET",
-                            url: "http://localhost:3000/users/recive"
+                            url: "/users/recive"
                         }).then(res => {
                             setMessage({ msg: res.data })
                             console.log("From Inner Axios", res.data);

@@ -1,5 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
+var app = express();
+var mongoose = require('mongoose')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -9,13 +11,15 @@ require('dotenv').config()
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+
+mongoose.connect(process.env.URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}, () => { console.log("Connected to MongoDB") })
 
 var port = process.env.PORT || '8000';
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+
 
 app.use(cors())
 app.use(logger('dev'));
