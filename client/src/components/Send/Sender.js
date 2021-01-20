@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
@@ -36,16 +36,16 @@ function Sender() {
                 <div className="inMessage">
                     <div className="com">
                         {message.msg.map((res, index) => <div key={index + 1}>
-                            <Fade right>
-                                <div className="sender">
-                                    <p className="senderBox">{res.first}</p>
-                                </div>
-                            </Fade>
-                            <Fade left>
-                                <div className="reciver">
-                                    <p className="reciverBox">{res.second}</p>
-                                </div>
-                            </Fade>
+                            {/* <Fade right> */}
+                            <div className="sender">
+                                <p className="senderBox">{res.first}</p>
+                            </div>
+                            {/* </Fade> */}
+                            {/* <Fade left> */}
+                            <div className="reciver">
+                                <p className="reciverBox">{res.second}</p>
+                            </div>
+                            {/* </Fade> */}
                         </div>)}
                     </div>
                 </div>
