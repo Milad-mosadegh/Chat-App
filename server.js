@@ -43,10 +43,12 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static('client/build'));
 
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
 
-module.exports = app;
+  module.exports = app;
