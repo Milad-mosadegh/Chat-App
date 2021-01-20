@@ -1,0 +1,77 @@
+.con{
+    width: 500px;
+    height: 700px;
+    background-color: rgb(159, 156, 156);
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.338);
+    margin: 30px;
+}
+
+.inMessage{
+    height: 650px;
+      /* overflow: hidden; */
+      overflow: scroll;
+      scroll-behavior: smooth;
+     display: flex;
+     flex-direction: column-reverse; 
+}
+
+.inMessage .sender{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 200px;
+}
+
+.inMessage .reciver{
+    width: 100%;
+}
+
+.inMessage .sender1{
+   width: 100%;
+    margin-bottom: 5px;
+}
+
+
+
+.inMessage .reciver1{
+   width: 100%;
+    margin-bottom: 5px;
+    text-align: end;
+      /* background-color: rgb(86, 218, 49); */
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+form input{
+
+    padding: 20px;
+    overflow: hidden;
+}
+
+form button{
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.sender .senderBox{
+    border-radius: 20px 20px 0 20px;
+    width: 300px;
+    background-color: red;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.reciver .reciverBox{
+    border-radius: 20px 20px 20px 0px;
+    width: 300px;
+    margin-left: 5px;
+    background-color: rgb(80, 80, 80);
+    font-size: 20px;
+}
+
+
