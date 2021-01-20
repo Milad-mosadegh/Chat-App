@@ -8,7 +8,7 @@ var logger = require('morgan');
 const cors = require('cors')
 require('dotenv').config()
 
-var indexRouter = require('./routes/index');
+
 var usersRouter = require('./routes/users');
 
 
@@ -19,8 +19,6 @@ mongoose.connect(process.env.URL, {
 
 var port = process.env.PORT || '8000';
 
-
-
 app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
